@@ -9,11 +9,7 @@
   var pluginName = 'smsCharCount',
   defaults = { },
 
-  // SMS 1-count chars
-  //!"#$%&'()*+,-0/0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz¡£¤¥§¿ÄÅÆÇÉÑÖØÜßàäåæèéìñòöøùü
-  //
-  // SMS 2-count chars
-  // ^{}\[~]|€ and \r\n?
+  // SMS 1-count chars (GSM-7 Regular alphabet)
   single_chars = [
     10, 13, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
     43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
@@ -28,6 +24,8 @@
     249, 252, 915, 916, 920, 923, 926, 928, 931, 934,
     936, 937
   ],
+
+  // SMS 2-count chars (GSM-7 extension table)
   multi_chars = [12, 91, 92, 93, 94, 123, 124, 125, 126, 8364],
 
   messageLength = {
